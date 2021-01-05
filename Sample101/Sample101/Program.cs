@@ -6,7 +6,10 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(1000);
+            Console.Write(1);
+            Console.Write(2);
+            Console.Write(3);
+            Console.WriteLine(4);
         }
     }
 }
