@@ -6,10 +6,10 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            Console.Write(1);
-            Console.Write(2);
-            Console.Write(3);
-            Console.WriteLine(4);
+            Console.WriteLine("{0} + {1} = {2}", 5, 2, 5 + 2);  //足し算
+            Console.WriteLine("{0} - {1} = {2}", 5, 2, 5 - 2);  //引き算
+            Console.WriteLine("{0} * {1} = {2}", 5, 2, 5 * 2);  //掛け算
+            Console.WriteLine("{0} / {1} = {2} 余り {3}", 5, 2, 5 / 2, 5 % 2);  //割り算・剰余
         }
     }
 }
