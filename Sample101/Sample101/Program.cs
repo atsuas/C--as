@@ -6,12 +6,11 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            string str1, str2;
-            Console.Write("str1=");
-            str1 = Console.ReadLine();
-            Console.Write("str2=");
-            str2 = Console.ReadLine();
-            Console.WriteLine("str1 + str2 = {0}", str1 + str2);
+            const int NUMBER = 100;
+            const string STRING = "HOGE";
+            Console.WriteLine(NUMBER);
+            Console.WriteLine(STRING);
+            //constがついた変数は値が変えられない
         }
     }
 }
