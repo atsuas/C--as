@@ -6,13 +6,12 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            int a;
-            double b, c, d;
-            a = (int)1.23;  //キャストで代入
-            b = 1.23;
-            c = 10;         //キャストなしで代入
-            d = (double)c;  //キャストありで代入
-            Console.WriteLine("a={0} b={1} c={2} d={3}", a, b, c, d);
+            string str1, str2;
+            Console.Write("str1=");
+            str1 = Console.ReadLine();
+            Console.Write("str2=");
+            str2 = Console.ReadLine();
+            Console.WriteLine("str1 + str2 = {0}", str1 + str2);
         }
     }
 }
