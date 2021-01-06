@@ -6,7 +6,8 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string s1 = "あいう", s2 = "えお", s3 = s1 + s2;
+            Console.WriteLine(s3);
         }
     }
 }
