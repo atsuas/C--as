@@ -6,12 +6,8 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            int a, b, c;
-            a = 2;
-            b = 3;
-            Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
-            c = a - b;
-            Console.WriteLine("{0} - {1} = {2}", a, b, c);
+            string s1 = "あいう", s2 = "えお", s3 = s1 + s2;
+            Console.WriteLine(s3);
         }
     }
 }
