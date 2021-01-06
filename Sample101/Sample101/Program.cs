@@ -6,27 +6,24 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            //サイコロの目を入力
-            Console.Write("サイコロの目(1~6):");
-            //コンソールから数値を入力
-            int dice = int.Parse(Console.ReadLine());
+            //キーボードから数値を入力
+            Console.Write("1から3の整数を入力：");
+            int num = int.Parse(Console.ReadLine());
 
-            //値が、サイコロの目の範囲内かどうかを調べる
-            if (1 <= dice && dice <= 6)
+            switch (num)
             {
-                //サイコロの目が、偶数か奇数かで処理を分ける
-                if (dice == 2 || dice == 4 || dice == 6)
-                {
-                    Console.WriteLine("丁です！"); //偶数ならば丁
-                }
-                else
-                {
-                    Console.WriteLine("半です！");  //奇数ならば半
-                }
-            }
-            else
-            {
-                Console.WriteLine("範囲外の数値です");
+                case 1:
+                    Console.WriteLine("one");   //numが1だった場合の処理
+                    break;
+                case 2:
+                    Console.WriteLine("two");   //numが2だった場合の処理
+                    break;
+                case 3:
+                    Console.WriteLine("three"); //numが3だった場合の処理
+                    break;
+                default:
+                    Console.WriteLine("不適切な値です");   //それ以外の値が入力された場合の処理
+                    break;
             }
         }
     }
