@@ -6,20 +6,16 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            Console.Write("tempの数値は:");
-            double temp = double.Parse(Console.ReadLine());
+            string s1 = Console.ReadLine();
+            string s2 = Console.ReadLine();
 
-            if (temp == 0.0)
+            if (s1 == "hello" && s2 == "world")
             {
-                Console.WriteLine("ゼロ");
-            }
-            else if (0.0 < temp)
-            {
-                Console.WriteLine("プラス");
+                Console.WriteLine("Good");
             }
             else
             {
-                Console.WriteLine("マイナス");
+                Console.WriteLine("helloworld please!");
             }
         }
     }
