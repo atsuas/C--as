@@ -6,16 +6,22 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            string s1 = Console.ReadLine();
-            string s2 = Console.ReadLine();
+            int n = int.Parse(Console.ReadLine());
 
-            if (s1 == "hello" && s2 == "world")
+            switch(n)
             {
-                Console.WriteLine("Good");
-            }
-            else
-            {
-                Console.WriteLine("helloworld please!");
+                case 1:
+                    Console.WriteLine("one");
+                    break;
+                case 2:
+                    Console.WriteLine("two");
+                    break;
+                case 3:
+                    Console.WriteLine("three");
+                    break;
+                default:
+                    Console.WriteLine("範囲外の数値です");
+                    break;
             }
         }
     }
