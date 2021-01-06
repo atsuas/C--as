@@ -13,7 +13,7 @@ namespace Sample101
                 case 1:
                     Console.WriteLine("one");
                     break;
-                case 2:
+                case 5:
                     Console.WriteLine("two");
                     break;
                 case 3:
