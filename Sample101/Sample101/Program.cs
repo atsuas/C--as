@@ -16,6 +16,10 @@ namespace Sample101
             {
                 Console.WriteLine("aは正の数です。");  //正の数だった場合に実行
             }
+            else
+            {
+                Console.WriteLine("aは正の数ではありません。"); //正の数ではない時に実行される
+            }
         }
     }
 }
