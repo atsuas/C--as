@@ -6,23 +6,23 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            //キーボードから数値を入力
-            Console.Write("1から3の整数を入力：");
-            int num = int.Parse(Console.ReadLine());
+            Console.Write("サイコロの目(1~6):");
+            int dice = int.Parse(Console.ReadLine());
 
-            switch (num)
+            switch (dice)
             {
-                case 1:
-                    Console.WriteLine("one");   //numが1だった場合の処理
-                    break;
                 case 2:
-                    Console.WriteLine("two");   //numが2だった場合の処理
+                case 4:
+                case 6:
+                    Console.WriteLine("丁です！");
                     break;
+                case 1:
                 case 3:
-                    Console.WriteLine("three"); //numが3だった場合の処理
+                case 5:
+                    Console.WriteLine("半です！");
                     break;
                 default:
-                    Console.WriteLine("不適切な値です");   //それ以外の値が入力された場合の処理
+                    Console.WriteLine("範囲外の値です");
                     break;
             }
         }
