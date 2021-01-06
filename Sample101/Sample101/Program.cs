@@ -6,19 +6,25 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            //キーワードから数値を入力
-            Console.Write("整数値を入力:");
-            int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("a=" + a);
+            //キーボードから数値を入力
+            Console.Write("1から3の整数を入力：");
+            int num = int.Parse(Console.ReadLine());
 
-            //入力した値が、正の数かどうか調べる
-            if (a > 0)
+            if (num == 1)
             {
-                Console.WriteLine("aは正の数です。");  //正の数だった場合に実行
+                Console.WriteLine("one");   //numが1だった場合の処理
+            }
+            else if (num == 2)
+            {
+                Console.WriteLine("two");   //numが2だった場合の処理
+            }
+            else if (num == 3)
+            {
+                Console.WriteLine("three"); //numが3だった場合の処理
             }
             else
             {
-                Console.WriteLine("aは正の数ではありません。"); //正の数ではない時に実行される
+                Console.WriteLine("不適切な値です");   //それ以外の値だった場合の処理
             }
         }
     }
