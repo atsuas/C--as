@@ -6,13 +6,24 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            int i = 0;
+            int i, num;
+            num = 1;
+            // whileループで実行
+            Console.Write("whileで実行:");
+            i = 1;
+            while (i < num)
+            {
+                Console.Write("*");
+                i++;
+            }
+            Console.WriteLine();
+            // do~ehileループで実行
+            Console.Write("do~ehileで実行:");
             do
             {
-                Console.Write(i + " ");
+                Console.WriteLine("*");
                 i++;
-            } while (i <= 5);
-            Console.WriteLine();
+            } while (i < num);
         }
     }
 }
