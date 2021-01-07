@@ -6,10 +6,17 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i <= 10; i++)
+            Console.Write("整数を入力:");
+            int num = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= num; i++)
             {
-                Console.WriteLine("HelloC#");
+                if (num % i == 0)
+                {
+                    Console.Write("{0} ", i);
+                }
             }
+
         }
     }
 }
