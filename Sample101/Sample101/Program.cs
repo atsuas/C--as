@@ -6,23 +6,11 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-
-            switch(n)
+            for (int i = 1; i <= 5; i++)
             {
-                case 1:
-                    Console.WriteLine("one");
-                    break;
-                case 5:
-                    Console.WriteLine("two");
-                    break;
-                case 3:
-                    Console.WriteLine("three");
-                    break;
-                default:
-                    Console.WriteLine("範囲外の数値です");
-                    break;
+                Console.Write(i + " ");
             }
+            Console.WriteLine();
         }
     }
 }
