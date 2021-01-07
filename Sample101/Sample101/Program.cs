@@ -6,15 +6,13 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i <= 2; i++)
+            int i = 0;
+            while (i <= 5)
             {
-                for (int j = 1; j <= 3; j++)
-                {
-                    int k = i + j;
-                    Console.Write(i + "+" + j + "=" + k + " ");
-                }
-                Console.WriteLine();
+                Console.Write(i + " ");
+                i++;
             }
+            Console.WriteLine();
         }
     }
 }
