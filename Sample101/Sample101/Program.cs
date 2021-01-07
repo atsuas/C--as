@@ -7,11 +7,11 @@ namespace Sample101
         static void Main(string[] args)
         {
             int i = 0;
-            while (i <= 5)
+            do
             {
                 Console.Write(i + " ");
                 i++;
-            }
+            } while (i <= 5);
             Console.WriteLine();
         }
     }
