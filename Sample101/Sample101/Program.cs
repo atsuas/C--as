@@ -6,24 +6,23 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            int a = rnd.Next(1, 11);    //1から10までの乱数を発生させaに代入する
-            int b = rnd.Next(1, 11);    //1から10までの乱数を発生させbに代入する
-            Console.WriteLine("a={0} b={1}", a, b);
-            //  回答を入力（正解が出るまで繰り返す）
-            while (true)
+            int[,] m = new int[9, 9];
+
+            for (int i = 1; i <= 9; i++)
             {
-                Console.Write("a+b=");
-                int ans = int.Parse(Console.ReadLine());    //回答の数値を入力
-                if (ans == a + b)
+                for (int j = 1; j <= 9; j++)
                 {
-                    Console.WriteLine("正解");
-                    break;
+                    m[i - 1, j - 1] = i * j;
                 }
-                else
+            }
+            //九九の表を表示
+            for (int i = 1; i <= 9; i++)
+            {
+                for (int j = 1; j <= 9; j++)
                 {
-                    Console.WriteLine("間違い");
+                    Console.Write("{0}*{1}={2} ", i, j, m[i - 1, j - 1]);
                 }
+                Console.WriteLine();
             }
         }
     }
