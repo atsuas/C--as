@@ -6,17 +6,23 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            int[] a = new int[10];
-            //　for文を用いて、要素に値を代入
-            for (int i = 0; i < a.Length; i++)
+            double[] d = new double[3];
+            d[0] = 0.2;
+            d[1] = 1.4;
+            d[2] = -0.8;
+            // double[] d = { 0.2, 1.4, -0.8 }; と書いてもいい
+
+            //配列の要素を表示
+            for (int i = 0; i < d.Length; i++)
             {
-                a[i] = i + 1;
+                d[i] = 0 + d[i];
             }
-            //for文を用いて要素を表示
-            for (int i = 0; i < a.Length; i++)
+
+            for (int i = 0; i < d.Length; i++)
             {
-                Console.WriteLine("a[{0}]={1}", i, a[i]);
+                Console.WriteLine("a[{0}]={1}", i, d[i]);
             }
+            Console.WriteLine();
         }
     }
 }
