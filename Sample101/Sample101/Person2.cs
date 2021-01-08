@@ -3,7 +3,7 @@
 
 namespace Sample101
 {
-    public class Access
+    public class Person2
     {
         //読み込みオンリーのデータ
         private int data1 = 5;
