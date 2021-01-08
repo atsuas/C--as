@@ -6,24 +6,12 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            int[,] m = new int[9, 9];
-
-            for (int i = 1; i <= 9; i++)
-            {
-                for (int j = 1; j <= 9; j++)
-                {
-                    m[i - 1, j - 1] = i * j;
-                }
-            }
-            //九九の表を表示
-            for (int i = 1; i <= 9; i++)
-            {
-                for (int j = 1; j <= 9; j++)
-                {
-                    Console.Write("{0}*{1}={2} ", i, j, m[i - 1, j - 1]);
-                }
-                Console.WriteLine();
-            }
+            Person p1;
+            p1 = new Person();  //１つ目のPersonクラスのメソッドのインスタンスを生成
+            p1.name = "山田太郎";   //フィールドnameに値を代入
+            p1.age = 19;           //フィールドageに値を代入
+            //ShowAgeAndName()メソッドで、それぞれのインスタンスのnameとageを表示
+            p1.ShowAgeAndName();
         }
     }
 }
