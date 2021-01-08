@@ -6,17 +6,30 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            double[] d = new double[3];
-            d[0] = 0.2;
-            d[1] = 1.4;
-            d[2] = -0.8;
-            // double[] d = { 0.2, 1.4, -0.8 }; と書いてもいい
+            int[] a = new int[10];
+            Random rnd = new Random();
+            int sum = 0;    //合計
+            double avg = 0.0;   //平均
+            int min = 101, max = 0; //最小値・最大値
 
-            //配列の要素を表示
-            for (int i = 0; i < d.Length; i++)
+            for(int i = 0; i < a.Length; i++)
             {
-                Console.WriteLine("a[{0}]={1}", i, d[i]);
+                a[i] = rnd.Next(1, 101);    // 1~100までの乱数をa[i]に代入
+                Console.Write("{0} ", a[i]);
+                sum += a[i];    //合計値の更新
+
+                if (a[i] < min)
+                {
+                    min = a[i]; //最小値の更新
+                }
+                if (a[i] > max)
+                {
+                    max = a[i]; //最大値の更新
+                }
             }
+            avg = sum / (double)a.Length;
+            Console.WriteLine();
+            Console.WriteLine("合計値:{0} 平均値{1} 最大値{2} 最小値{3}", sum, avg, max, min);
         }
     }
 }
