@@ -6,15 +6,16 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            int[][] a = new int[][] { new int[] { 0, 1 }, new int[] { 2 }, new int[] { 3, 4, 5, 6 } };
-            //成分の表示
-            for (int m = 0; m < a.Length; m++)
+            int[] a = new int[10];
+            //　for文を用いて、要素に値を代入
+            for (int i = 0; i < a.Length; i++)
             {
-                for (int n = 0; n < a[m].Length; n++)
-                {
-                    Console.Write(a[m][n] + " ");
-                }
-                Console.WriteLine();
+                a[i] = i + 1;
+            }
+            //for文を用いて要素を表示
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.WriteLine("a[{0}]={1}", i, a[i]);
             }
         }
     }
