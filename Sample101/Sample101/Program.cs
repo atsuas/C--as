@@ -6,10 +6,17 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            Access a = new Access();
-            a.Data2 = 2;
-            a.ShowDatas();
-            Console.WriteLine("a.data1 = {0}", a.Data1);
+            Person2 p = new Person2();
+            //名前と年齢を設定
+            p.SetAgeAndName("山田太郎", 26);
+            //年齢の変更
+            p.Age = 32;
+
+            //名前の変更（出来ない）
+            //p.Name = 36;
+
+            //名前の年齢の表示
+            Console.WriteLine("名前: {0} 年齢: {1}", p.Name, p.Age);
         }
     }
 }

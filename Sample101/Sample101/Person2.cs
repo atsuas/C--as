@@ -5,24 +5,26 @@ namespace Sample101
 {
     public class Person2
     {
-        //読み込みオンリーのデータ
-        private int data1 = 5;
-        //書き込みオンリーのデータ
-        private int data2 = 0;
-        //値の表示
-        public void ShowDatas()
+        //情報の設定
+        public void SetAgeAndName(string name, int age)
         {
-            Console.WriteLine("data1={0} data2={1}", data1, data2);
+            Name = name;
+            Age = age;
         }
-        //data1のプロパティ（読み込みオンリー）
-        public int Data1
+        //情報の表示（メソッド）
+        public void ShowAgeAndName()
         {
-            get { return data1; }
+            Console.WriteLine("名前: {0} 年齢: {1}", Name, Age);
         }
-        //data2のプロパティ（書き込みオンリー）
-        public int Data2
+        //情報の設定
+        public string Name
         {
-            set { data2 = value; }
+            private set; get;
+        }
+        //情報の設定
+        public int Age
+        {
+            set; get;
         }
     }
 }
