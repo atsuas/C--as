@@ -6,19 +6,10 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            int[] n = { 5, 4, 3, 2, 1 };
-            string[] s = { "ABC", "DEF", "GHI" };
-            int i;
-            //整列型配列変数nの成分表示
-            for (i = 0; i < n.Length; i++)
+            int[] n = { 1, 2, 3, 4 };
+            foreach (int i in n)
             {
-                Console.Write(n[i] + " ");
-            }
-            Console.WriteLine();
-            // 文字列型配列変数sの成分表示
-            for (i = 0; i < s.Length; i++)
-            {
-                Console.Write(s[i] + " ");
+                Console.Write("{0} ", i);
             }
             Console.WriteLine();
         }
