@@ -3,7 +3,7 @@
 
 namespace Sample101
 {
-    public class Person
+    public class Calc
     {
         //名前（フィールド）
         public string name = "";
