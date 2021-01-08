@@ -15,14 +15,8 @@ namespace Sample101
             //配列の要素を表示
             for (int i = 0; i < d.Length; i++)
             {
-                d[i] = 0 + d[i];
-            }
-
-            for (int i = 0; i < d.Length; i++)
-            {
                 Console.WriteLine("a[{0}]={1}", i, d[i]);
             }
-            Console.WriteLine();
         }
     }
 }
