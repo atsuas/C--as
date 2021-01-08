@@ -6,24 +6,28 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            int[,] m = new int[9, 9];
+            Vecter2D v1 = new Vecter2D();
+            v1.x = 1.0; v1.y = 1.0;
+            Console.WriteLine("v1=({0}, {1})", v1.x, v1.y); //  v1=（1,1）と表示される
 
-            for (int i = 1; i <= 9; i++)
-            {
-                for (int j = 1; j <= 9; j++)
-                {
-                    m[i - 1, j - 1] = i * j;
-                }
-            }
-            //九九の表を表示
-            for (int i = 1; i <= 9; i++)
-            {
-                for (int j = 1; j <= 9; j++)
-                {
-                    Console.Write("{0}*{1}={2} ", i, j, m[i - 1, j - 1]);
-                }
-                Console.WriteLine();
-            }
+            Vecter2D v2 = new Vecter2D();
+            v2.x = 1.0; v2.y = -1.0;
+            Console.WriteLine("v2=({0}, {1})", v2.x, v2.y);   //  v2= (1,-1) と表示される
+
+            //v1+v2
+            v1.Add(v2);
+            Console.WriteLine("v1=({0}, {1})", v1.x, v1.y); //  v1=（2,0）と表示される
+
+            //v1-v2
+            v1.Sub(v2);
+            Console.WriteLine("v1=({0}, {1})", v1.x, v1.y); //  v1=（1,1）と表示される
+
+            //2*v1
+            v1.Mul(2.0);
+            Console.WriteLine("v1=({0}, {1})", v1.x, v1.y); //  v1=（2,2）と表示される
+
+            //v1.v2の内積
+            Console.WriteLine("v1, v2の内積: {0}", v1.DotProduct(v2)); //v1.v1の内積は０と出る
         }
     }
 }
