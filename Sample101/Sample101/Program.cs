@@ -6,30 +6,24 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            int[] a = new int[10];
-            Random rnd = new Random();
-            int sum = 0;    //合計
-            double avg = 0.0;   //平均
-            int min = 101, max = 0; //最小値・最大値
+            int[,] m = new int[9, 9];
 
-            for(int i = 0; i < a.Length; i++)
+            for (int i = 1; i <= 9; i++)
             {
-                a[i] = rnd.Next(1, 101);    // 1~100までの乱数をa[i]に代入
-                Console.Write("{0} ", a[i]);
-                sum += a[i];    //合計値の更新
-
-                if (a[i] < min)
+                for (int j = 1; j <= 9; j++)
                 {
-                    min = a[i]; //最小値の更新
-                }
-                if (a[i] > max)
-                {
-                    max = a[i]; //最大値の更新
+                    m[i - 1, j - 1] = i * j;
                 }
             }
-            avg = sum / (double)a.Length;
-            Console.WriteLine();
-            Console.WriteLine("合計値:{0} 平均値{1} 最大値{2} 最小値{3}", sum, avg, max, min);
+            //九九の表を表示
+            for (int i = 1; i <= 9; i++)
+            {
+                for (int j = 1; j <= 9; j++)
+                {
+                    Console.Write("{0}*{1}={2} ", i, j, m[i - 1, j - 1]);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
