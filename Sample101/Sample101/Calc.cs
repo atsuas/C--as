@@ -5,20 +5,15 @@ namespace Sample101
 {
     public class Calc
     {
-        //名前（フィールド）
-        public string name = "";
-        //年齢（フィールド）
-        public int age = 0;
-        //情報の表示（メソッド）
-        public void ShowAgeAndName()
+        //二つの整数の引数の和を求める
+        public int Add(int a, int b)
         {
-            Console.WriteLine("名前: {0} 年齢: {1}", name, age);
+            return a + b;
         }
-        //情報の設定
-        public void SetAgeAndName(string name, int age)
+        //三つの整数の引数の和を求める
+        public int Add(int a, int b, int c)
         {
-            this.name = name;
-            this.age = age;
+            return a + b + c;
         }
     }
 }
