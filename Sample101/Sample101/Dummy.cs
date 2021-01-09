@@ -3,39 +3,17 @@
 
 namespace Sample101
 {
-    public class Person
+    class Dummy
     {
-        //フィールドname(名前)
-        private string name = "";
-        //フィールドage(年齢)
-        private int age = 0;
-        //コンストラクタ(引数なし)
-        public Person() : this("名無し", 0)
+        //コンストラクタ
+        public Dummy()
         {
-            Console.WriteLine("引数なしコンストラクタ");
+            Console.WriteLine("コンストラクタ");
         }
-        //コンストラクタ(引数あり)
-        public Person(string name, int age)
+        //デストラクタ
+        ~Dummy()
         {
-            this.name = name;
-            this.age = age;
-            Console.WriteLine("引数ありコンストラクタ name: {0} age: {1}", name, age);
+            Console.WriteLine("デストラクタ");
         }
-        //情報の表示
-        public void ShowAgeAndName()
-        {
-            Console.WriteLine("名前: {0} 年齢: {1}", name, age);
-        }
-        //nameのプロパティ
-        public string Name
-        {
-            set; get;
-        }
-        //ageのプロパティ
-        public int Age
-        {
-            set; get;
-        }
-
     }
 }

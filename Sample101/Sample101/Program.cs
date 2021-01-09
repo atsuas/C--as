@@ -6,7 +6,7 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            
+            Dummy d = new Dummy();
         }
     }
 }
