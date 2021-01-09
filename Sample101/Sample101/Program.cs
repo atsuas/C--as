@@ -4,19 +4,27 @@ namespace Sample101
 {
     class Program
     {
+        //staticなフィールド
+        private static int snum = 100;
+        //インスタンスフィールド
+        public int inum = 200;
+        //staticなメソッド
+        public static void foo()
+        {
+            Console.WriteLine("fooメソッド　(staticメソッド)");
+        }
+        public void bar()
+        {
+            Console.WriteLine("barメソッド(インスタンスメソッド)");
+        }
         static void Main(string[] args)
         {
-            //Dataクラスを３つ作る
-            Data[] d = new Data[2];
-            //Dataのインスタンスの数を表示
-            Data.ShowNumber();
-            //一つ目のインスタンスを生成
-            for (int i = 0; i < d.Length; i++)
-            {
-                d[i] = new Data(i * 100);
-                //Dataのインスタンスを生成
-                Data.ShowNumber();
-            }
+            //インスタンスの生成
+            Program p = new Program();
+            Console.WriteLine("pのインスタンスフィールド:inum = {0}", p.inum);
+            Console.WriteLine("Programのクラスフィールド:snum = {0}", snum);
+            foo();
+            p.bar();
         }
     }
 }
