@@ -3,28 +3,32 @@
 
 namespace Sample101
 {
-    public class Person2
+    public class Vector2D
     {
-        //情報の設定
-        public void SetAgeAndName(string name, int age)
+        public void Add(Vector2D v)
         {
-            Name = name;
-            Age = age;
+            X += v.X; Y += v.Y;
         }
-        //情報の表示（メソッド）
-        public void ShowAgeAndName()
+        public void Sub(Vector2D v)
         {
-            Console.WriteLine("名前: {0} 年齢: {1}", Name, Age);
+            X -= v.X; Y -= v.Y;
         }
-        //情報の設定
-        public string Name
+        public void Mul(double k)
         {
-            private set; get;
+            X *= k; Y *= k;
         }
-        //情報の設定
-        public int Age
+        public double DotProduct(Vector2D v)
+        {
+            return X * v.X + Y * v.Y;
+        }
+        public double X
         {
             set; get;
         }
+        public double Y
+        {
+            set; get;
+        }
+            
     }
 }
