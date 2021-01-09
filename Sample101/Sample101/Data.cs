@@ -3,46 +3,23 @@
 
 namespace Sample101
 {
-    class Vector2D
+    class Data
     {
-        //追加部分 ↓
-        public Vector2D()
+        //Dataオブジェクトの数
+        private static int num = 0;
+        //データの数
+        private int id;
+        //コンストラクタ（引数つき）
+        public Data(int id)
         {
-
+            this.id = id;
+            num++;
+            Console.WriteLine("値:{0} 数:{1}", this.id, num);
         }
-        public Vector2D(double x,double y)
+        //オブジェクトの数を取得
+        public static void ShowNumber()
         {
-            X = x; Y = y;
-        }
-        public Vector2D(Vector2D v)
-        {
-            X = v.X; Y = v.Y;
-        }
-        //追加部分↑
-
-        public void Add(Vector2D v)
-        {
-            X += v.X; Y += v.Y; 
-        }
-        public void Sub(Vector2D v)
-        {
-            X -= v.X; Y -= v.Y;
-        }
-        public void Mul(double k)
-        {
-            X *= k; Y *= k;
-        }
-        public double DotProduct(Vector2D v)
-        {
-            return X * v.X + Y * v.Y;
-        }
-        public double X
-        {
-            set; get;
-        }
-        public double Y
-        {
-            set; get;
+            Console.WriteLine("Dataオブジェクトの数:{0}", num);
         }
     }
 }
