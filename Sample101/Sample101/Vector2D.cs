@@ -3,11 +3,26 @@
 
 namespace Sample101
 {
-    public class Vector2D
+    class Vector2D
     {
+        //追加部分 ↓
+        public Vector2D()
+        {
+
+        }
+        public Vector2D(double x,double y)
+        {
+            X = x; Y = y;
+        }
+        public Vector2D(Vector2D v)
+        {
+            X = v.X; Y = v.Y;
+        }
+        //追加部分↑
+
         public void Add(Vector2D v)
         {
-            X += v.X; Y += v.Y;
+            X += v.X; Y += v.Y; 
         }
         public void Sub(Vector2D v)
         {
@@ -29,6 +44,5 @@ namespace Sample101
         {
             set; get;
         }
-            
     }
 }
