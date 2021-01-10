@@ -4,21 +4,26 @@ namespace Sample101
 {
     class Program
     {
-        
         static void Main(string[] args)
         {
-            Console.WriteLine("実数値を入力してください。");
-            double n = double.Parse(Console.ReadLine());
-            if(n >= 0)
+            Console.Write("p1.X = ");
+            double x1 = double.Parse(Console.ReadLine());
+            Console.Write("p1.Y = ");
+            double y1 = double.Parse(Console.ReadLine());
+            Console.Write("p2.X = ");
+            double x2 = double.Parse(Console.ReadLine());
+            Console.Write("p2.Y = ");
+            double y2 = double.Parse(Console.ReadLine());
+            Point2D p1 = new Point2D(x1, y1);
+            Point2D p2 = new Point2D(x2, y2);
+            //座標の表示
+            Console.WriteLine("p1={0} p2={1}", p1, p2);
+            //二点間の距離の表示
+            Console.WriteLine("p1.p2の距離:{0}", p1.Distance(p2));
+            //同じ点だったらその旨を表示する
+            if (p1.Equals(p2))
             {
-                //  平方根の表示
-                double r = Math.Sqrt(n);    //  nの平方根をrに代入
-                Console.WriteLine("{0}の平方根は{1}です。", n, r);
-            }
-            else
-            {
-                //  負の値の場合
-                Console.WriteLine("正の数を入力してください。");
+                Console.WriteLine("p1,p2は同一の点です。");
             }
         }
     }
