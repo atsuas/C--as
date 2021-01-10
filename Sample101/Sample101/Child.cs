@@ -17,7 +17,7 @@ namespace Sample101
             Console.WriteLine("Subのコンストラクタ(引数:param={0})", param);
         }
         //Subクラスのデストラクタ
-        ˜Sub()
+        ~Sub()
         {
             Console.WriteLine("Subクラスのデストラクタ");
         }
