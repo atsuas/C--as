@@ -4,15 +4,15 @@ namespace Sample101
 {
     class Program
     {
+        public void Foo()
+        {
+            Console.WriteLine("Foo");
+        }
+
         static void Main(string[] args)
         {
-            //Parentクラスのインスタンス生成
-            Parent p = new Parent();
-            //Childクラスのインスタンス生成
-            Parent c = new Child();
-            //それぞれのクラスのfoo、barメソッドを実行
-            p.Foo();
-            c.Foo();
+            Program s = new Program();
+            Console.WriteLine(s.ToString());
         }
     }
 }
