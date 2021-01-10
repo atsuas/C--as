@@ -3,18 +3,23 @@
 
 namespace Sample101
 {
-    //Calculatorクラスを継承した、ExCalculatorクラス
-    class ExCalculator : Calculator
+    //  サブクラス（Superクラスを継承）
+    class Sub : Super
     {
-        //掛け算
-        public void mul ()
+        //Subクラスのコンストラクタ
+        public Sub()
         {
-            Console.WriteLine("{0} * {1} = {2}", num1, num2, num1 * num2);
+            Console.WriteLine("Subのコンストラクタ(引数なし)");
         }
-        //割り算
-        public void div ()
+        //Subクラスのコンストラクタ
+        public Sub(int param) : base(param)
         {
-            Console.WriteLine("{0} / {1} = {2}", num1, num2, num1 / num2);
+            Console.WriteLine("Subのコンストラクタ(引数:param={0})", param);
+        }
+        //Subクラスのデストラクタ
+        ˜Sub()
+        {
+            Console.WriteLine("Subクラスのデストラクタ");
         }
     }
 }
