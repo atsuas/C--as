@@ -3,30 +3,12 @@
 
 namespace Sample101
 {
-    //スーパークラス
-    class Super
+    //  親クラス
+    class Parent
     {
-        //パラメータ
-        private int param = 0;
-        //コンストラクタ
-        public Super()
+        public virtual void Foo()
         {
-            Console.WriteLine("Superクラスのコンストラクタ(引数なし)");
-        }
-        //コンストラクタ(引数あり)
-        public Super(int param)
-        {
-            Console.WriteLine("Superクラスのコンストラクタ(引数:param={0})", param);
-            this.param = param;
-        }
-        //デストラクタ
-        ~Super()
-        {
-            Console.WriteLine("Superクラスのデストラクタ");
-        }
-        public void showParam()
-        {
-            Console.WriteLine("Param = {0}", param);
+            Console.WriteLine("親クラスのFoo()メソッド");
         }
     }
 }
