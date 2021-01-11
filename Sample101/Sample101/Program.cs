@@ -6,12 +6,13 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            Data d = new Data();
-            IWrite wr = d;
-            IRead rd = d;
-            wr.Write(1);     //データの書き込み
-            int num = rd.Read();
-            Console.WriteLine("data={0}", num);
+            //IMul m = new Mul1();
+            IMul m = new Mul2();
+            Console.Write("a=");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("b=");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("{0} * {1} = {2}", a, b, m.Calc(a, b));
         }
     }
 }

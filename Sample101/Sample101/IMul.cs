@@ -1,17 +1,8 @@
 ﻿using System;
 namespace Sample101
 {
-    class Data : IWrite, IRead
+    interface IMul
     {
-        //データ
-        private int num = 0;
-        public void Write(int num)
-        {
-            this.num = num;
-        }
-        public int Read()
-        {
-            return num;
-        }
+        int Calc(int a, int b);
     }
 }

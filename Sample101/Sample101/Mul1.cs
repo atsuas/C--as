@@ -1,8 +1,16 @@
 ﻿using System;
 namespace Sample101
 {
-    interface IWrite
+    class Mul1 : IMul
     {
-        void Write(int num);
+        public int Calc(int a, int b)
+        {
+            int result = 0;
+            for(int i = 0; i < b; i++)
+            {
+                result += a;
+            }
+            return result;
+        }
     }
 }
