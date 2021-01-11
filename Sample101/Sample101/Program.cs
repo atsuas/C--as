@@ -10,24 +10,19 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            List<int> l = new List<int>();
-            while (true)
+            string[] months = { "January", "February", "March","April", "May",
+                        "June", "July", "August", "September", "October", "November", "December"};
+            Dictionary<string, int> m = new Dictionary<string, int>();
+            //月の名前と番号を対応
+            for(int i = 0; i < months.Length; i++)
             {
-                Console.Write("1~10の整数を入力:");
-                int num = int.Parse(Console.ReadLine());
-                if(num < 1 || num > 10)
-                {
-                    break;  //範囲外であればループから抜ける
-                }
-                l.Add(num);
+                m[months[i]] = i + 1;
             }
-            // lの並べ替え
-            l.Sort();
-            l.Reverse();    //大きい順に並べる際はReverseを使う
-            foreach(int n in l)
-            {
-                Console.Write("{0} ", n);
-            }
+            //月の名前を入力
+            Console.Write("英語で月の名前を入力してください:");
+            string name = Console.ReadLine();
+            //結果の表示
+            Console.WriteLine("{0}は{1}月です ", name, m[name]);
         }
     }
 }
