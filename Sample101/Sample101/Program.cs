@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.Generic;   //コレクションを使う際に記述する
 
 namespace Sample101
 {
