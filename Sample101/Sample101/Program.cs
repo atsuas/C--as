@@ -6,15 +6,12 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            Dummy d = new Dummy();
-            IFuncs1 i1 = (IFuncs1)d;
-            IFuncs2 i2 = (IFuncs2)d;
-            //i1のメソッドを利用
-            i1.Func1();
-            i1.Func2();
-            //i2のメソッドを利用
-            i2.Func2();
-            i2.Func3();
+            Data d = new Data();
+            IWrite wr = d;
+            IRead rd = d;
+            wr.Write(1);     //データの書き込み
+            int num = rd.Read();
+            Console.WriteLine("data={0}", num);
         }
     }
 }
