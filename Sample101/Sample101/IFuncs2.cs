@@ -3,10 +3,9 @@
 
 namespace Sample101
 {
-    //電話インターフェース
-  interface IPhone
+    interface IFuncs2
     {
-        //指定した番号に電話をかける
-        void Call(string number);
+        void Func2();
+        void Func3();
     }
 }

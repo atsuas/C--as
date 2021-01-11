@@ -3,11 +3,9 @@
 
 namespace Sample101
 {
-
-    //電子メール
-    interface IEmail
+    interface IFuncs1
     {
-        //メールを送る
-        void SendMail(string address);
+        void Func1();
+        void Func2();
     }
 }

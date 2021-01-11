@@ -1,28 +1,19 @@
 ﻿using System;
 namespace Sample101
 {
-    //携帯電話クラス（IPhone、IEmailクラスを実装
-    class CellPhone : IPhone, IEmail
+    class Dummy : IFuncs1, IFuncs2
     {
-        //メールアドレス
-        private string mailAddress;
-        //電話番号
-        private string number;
-        //コンストラクタ（メールアドレスと電話番号を設定
-        public CellPhone(string mailAddress, string number)
+        public void Func1()
         {
-            this.mailAddress = mailAddress;
-            this.number = number;
+            Console.WriteLine("Func1");
         }
-        //指定したメールアドレスにメールを送信する
-        public void SendMail(string address)
+        public void Func2()
         {
-            Console.WriteLine(address + "に、" + this.mailAddress + "からメールを出します.");
+            Console.WriteLine("Func2");
         }
-        //指定した番号に電話をかける
-        public void Call(string number)
+        public void Func3()
         {
-            Console.WriteLine(number + "に、" + this.number + "から電話をかけます。");
+            Console.WriteLine("Func3");
         }
     }
 }
