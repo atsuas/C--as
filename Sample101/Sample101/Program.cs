@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Sample101
 {
@@ -6,13 +7,17 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            //IMul m = new Mul1();
-            IMul m = new Mul2();
-            Console.Write("a=");
-            int a = int.Parse(Console.ReadLine());
-            Console.Write("b=");
-            int b = int.Parse(Console.ReadLine());
-            Console.WriteLine("{0} * {1} = {2}", a, b, m.Calc(a, b));
+            List<int> a = new List<int>();
+            //値を挿入
+            a.Add(3);
+            a.Add(2);
+            a.Add(1);
+            //１番目に4を挿入
+            a.Insert(1, 4);
+            for (int i = 0; i < a.Count; i++)
+            {
+                Console.WriteLine("a[{0}]={1} ", i, a[i]);
+            }
         }
     }
 }
