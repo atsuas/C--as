@@ -6,10 +6,19 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            Vector v = new Vector();
-            v.X = 0.1;
-            v.Y = 0.2;
-            Console.WriteLine("v=({0}, {1})", v.X, v.Y);
+            Crow c = new Crow();        //カラスクラス
+            Sparrow s = new Sparrow();  //スズメクラス
+            Chicken k = new Chicken();  //ニワトリクラス
+            //カラスがなく
+            Console.Write(c.Name + " : ");
+            c.Sing();
+            //スズメがなく
+            Console.Write(s.Name + " : ");
+            s.Sing();
+            //ニワトリがなく
+            Console.Write(k.Name + " : ");
+            k.Sing();
+
         }
     }
 }
