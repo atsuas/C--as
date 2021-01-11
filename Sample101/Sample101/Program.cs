@@ -21,14 +21,13 @@ namespace Sample101
                 }
                 l.Add(num);
             }
-
+            // lの並べ替え
+            l.Sort();
+            l.Reverse();    //大きい順に並べる際はReverseを使う
             foreach(int n in l)
             {
                 Console.Write("{0} ", n);
             }
-            Console.WriteLine();
-            //　最大値・最小値の表示
-            Console.WriteLine("最大値{0} 最小値{1}", l.Max(), l.Min());
         }
     }
 }
