@@ -7,16 +7,18 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            List<int> a = new List<int>();
-            //値を挿入
-            a.Add(3);
-            a.Add(2);
-            a.Add(1);
-            //１番目に4を挿入
-            a.Insert(1, 4);
-            for (int i = 0; i < a.Count; i++)
+            List<String> a = new List<String>();
+            //データを追加
+            a.Add("taro");
+            a.Add("hanako");
+            a.Add("jiro");
+            a.Add("kaoru");
+            //データを削除
+            a.Remove("taro");   //"taro"を削除
+            a.RemoveAt(1);      //１番目のデータを削除
+            foreach (String s in a)
             {
-                Console.WriteLine("a[{0}]={1} ", i, a[i]);
+                Console.WriteLine(s);
             }
         }
     }
