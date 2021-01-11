@@ -7,18 +7,16 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            List<String> a = new List<String>();
-            //データを追加
-            a.Add("taro");
-            a.Add("hanako");
-            a.Add("jiro");
-            a.Add("kaoru");
-            //データを削除
-            a.Remove("taro");   //"taro"を削除
-            a.RemoveAt(1);      //１番目のデータを削除
-            foreach (String s in a)
+            Dictionary<String, String> capital = new Dictionary<string, string>();
+            //連想記憶クラスの生成
+            capital["日本"] = "東京";
+            capital["イギリス"] = "ロンドン";
+            capital["フランス"] = "パリ";
+            capital["中国"] = "北京";
+            Console.WriteLine("世界の首都");
+            foreach (String s in capital.Keys)
             {
-                Console.WriteLine(s);
+                Console.WriteLine("{0}の首都は{1}です", s, capital[s]);
             }
         }
     }
