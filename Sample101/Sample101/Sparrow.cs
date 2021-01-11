@@ -3,19 +3,16 @@
 
 namespace Sample101
 {
-    // スズメクラス
-    class Sparrow
+    class Sparrow : Bird
     {
-        private String name = "すずめ";
-        //スズメがなく
-        public void Sing()
+        //コンストラクタ
+        public Sparrow() : base("すずめ")
+        {
+        }
+        //すずめが鳴く
+        public override void Sing()
         {
             Console.WriteLine("チュンチュン");
-        }
-        //名前を取得
-        public String Name
-        {
-            get { return name; }
         }
     }
 }
