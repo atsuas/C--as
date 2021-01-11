@@ -6,19 +6,15 @@ namespace Sample101
     {
         static void Main(string[] args)
         {
-            Crow c = new Crow();        //カラスクラス
-            Sparrow s = new Sparrow();  //スズメクラス
-            Chicken k = new Chicken();  //ニワトリクラス
-            //カラスがなく
-            Console.Write(c.Name + " : ");
-            c.Sing();
-            //スズメがなく
-            Console.Write(s.Name + " : ");
-            s.Sing();
-            //ニワトリがなく
-            Console.Write(k.Name + " : ");
-            k.Sing();
-
+            Bird[] b = new Bird[3];
+            b[0] = new Crow();
+            b[1] = new Sparrow();
+            b[2] = new Chicken();
+            for (int i = 0; i < b.Length; i++)
+            {
+                Console.Write(b[i].Name + " : ");
+                b[i].Sing();
+            }
         }
     }
 }
