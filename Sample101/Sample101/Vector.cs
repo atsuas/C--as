@@ -3,16 +3,20 @@
 
 namespace Sample101
 {
-    class Sparrow : Bird
+    class Vector : VectorBase
     {
-        //コンストラクタ
-        public Sparrow() : base("すずめ")
+        private double x = 0.0;
+        private double y = 0.0;
+        //プロパティの実装
+        public override double X
         {
+            set { x = value; }
+            get { return x; }
         }
-        //すずめが鳴く
-        public override void Sing()
+        public override double Y
         {
-            Console.WriteLine("チュンチュン");
+            set { y = value; }
+            get { return y; }
         }
     }
 }

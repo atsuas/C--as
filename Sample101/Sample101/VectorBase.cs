@@ -3,15 +3,19 @@
 
 namespace Sample101
 {
-    class Crow : Bird
+    //スーパークラス(抽象プロパティ持つ)
+    abstract class VectorBase
     {
-        public Crow() : base("カラス")
+        //抽象プロパティ
+        public abstract double X
         {
+            set;
+            get;
         }
-        //カラスが鳴く
-        public override void Sing()
+        public abstract double Y
         {
-            Console.WriteLine("カーカー");
+            set;
+            get;
         }
     }
 }
