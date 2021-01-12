@@ -28,7 +28,15 @@ namespace Sample101
         }
         static void Div(int a, int b)
         {
-            Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
+            try
+            {
+                Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
+            }
+            catch(DivideByZeroException e)
+            {
+                Console.WriteLine("ゼロで割り算はできません");
+            }
+            
         }
         static void Main(string[] args)
         {
@@ -39,7 +47,7 @@ namespace Sample101
             o1 += new Operation(Mul);
             o1 += new Operation(Div);
 
-            o1(2, 1);
+            o1(2, 0);
         }
     }
 }
