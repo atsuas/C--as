@@ -6,23 +6,48 @@ using System.Threading.Tasks;
 
 namespace Sample101
 {
+    delegate void Operation(int a, int b);
+
+    class Calc
+    {
+        public void Sub(int a, int b)
+        {
+            Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
+        }
+    }
+
     class Program
     {
+        static void Add(int a, int b)
+        {
+            Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
+        }
+        static void Mul(int a, int b)
+        {
+            Console.WriteLine("{0} * {1} = {2}", a, b, a * b);
+        }
+        static void Div(int a, int b)
+        {
+            try
+            {
+                Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
+            }
+            catch(DivideByZeroException e)
+            {
+                Console.WriteLine("ゼロで割り算はできません");
+            }
+            
+        }
         static void Main(string[] args)
         {
-            string[] months = { "January", "February", "March","April", "May",
-                        "June", "July", "August", "September", "October", "November", "December"};
-            Dictionary<string, int> m = new Dictionary<string, int>();
-            //月の名前と番号を対応
-            for(int i = 0; i < months.Length; i++)
-            {
-                m[months[i]] = i + 1;
-            }
-            //月の名前を入力
-            Console.Write("英語で月の名前を入力してください:");
-            string name = Console.ReadLine();
-            //結果の表示
-            Console.WriteLine("{0}は{1}月です ", name, m[name]);
+            Calc c = new Calc();
+
+            Operation o1 = new Operation(Add);
+            o1 += new Operation(c.Sub);
+            o1 += new Operation(Mul);
+            o1 += new Operation(Div);
+
+            o1(2, 0);
         }
     }
 }
