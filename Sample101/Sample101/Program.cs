@@ -6,29 +6,40 @@ using System.Threading.Tasks;
 
 namespace Sample101
 {
+    delegate void Operation(int a, int b);
+
+    class Calc
+    {
+        public void Sub(int a, int b)
+        {
+            Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
+        }
+    }
+
     class Program
     {
-        static int GetNum(int i)
+        static void Add(int a, int b)
         {
-            int[] nums = { 300, 600, 900 };
-            if(i > nums.Length)
-            {
-                //例外を発生させる
-                throw new IndexOutOfRangeException();
-            }
-            return nums[i];
-
+            Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
         }
-        static void Main()
+        static void Mul(int a, int b)
         {
-            try
-            {
-                int result = GetNum(4);
-            }
-            catch (IndexOutOfRangeException e)
-            {
-                Console.WriteLine("配列の範囲外にアクセスしました");
-            }
+            Console.WriteLine("{0} * {1} = {2}", a, b, a * b);
+        }
+        static void Div(int a, int b)
+        {
+            Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
+        }
+        static void Main(string[] args)
+        {
+            Calc c = new Calc();
+
+            Operation o1 = new Operation(Add);
+            o1 += new Operation(c.Sub);
+            o1 += new Operation(Mul);
+            o1 += new Operation(Div);
+
+            o1(2, 1);
         }
     }
 }
