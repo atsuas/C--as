@@ -14,8 +14,8 @@ namespace Sample101
             {
                 for (int i = 0; i <= 5; i++)
                 {
-                    int a = getNum(i);
-                    int b = 5;
+                    int a = 5;  //getNum(i);
+                    int b = 0;  //5;
                     Console.Write(a + " / " + b + " = ");
                     Console.WriteLine(calc(a, b));
                 }
